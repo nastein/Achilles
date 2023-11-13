@@ -28,7 +28,10 @@ class PSBuilder {
         MOCK std::unique_ptr<PSMapper> build() { return std::move(phase_space); }
 
     private:
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-private-field"
         size_t m_nlep, m_nhad;
+#pragma GCC diagnostic pop
         std::unique_ptr<PSMapper> phase_space = nullptr;
 };
 
